@@ -1,3 +1,9 @@
+export interface PortfolioItem {
+  client: string;
+  description: string;
+  url: string;
+}
+
 export interface SegmentFAQ {
   question: string;
   answer: string;
@@ -39,6 +45,15 @@ export interface SegmentConfig {
     paymentTerms: string;
   };
   compliance: {
+    heading: string;
+    text: string;
+  };
+  portfolio: {
+    heading: string;
+    description: string;
+    items: PortfolioItem[];
+  };
+  guarantee: {
     heading: string;
     text: string;
   };
@@ -91,6 +106,11 @@ export const segments: Record<string, SegmentConfig> = {
             "Estruturado para aparecer quando pacientes buscam dentistas na sua região.",
         },
         {
+          title: "Visível para IA (ChatGPT, Gemini)",
+          description:
+            "Sites preparados para serem citados por assistentes de IA — o novo canal de descoberta que seus concorrentes ainda ignoram.",
+        },
+        {
           title: "Você mesmo atualiza",
           description:
             "Sistema de conteúdo que você controla — sem depender de desenvolvedor para cada mudança.",
@@ -137,6 +157,26 @@ export const segments: Record<string, SegmentConfig> = {
       heading: "Conformidade com normas do CFO/CRO",
       text: "Construímos sites que respeitam as normas de publicidade do Conselho Federal de Odontologia. Sem divulgação de preços de procedimentos, sem imagens de antes e depois, com exibição do dentista responsável e número de CRO.",
     },
+    portfolio: {
+      heading: "Sites que já entregamos",
+      description: "Veja outros projetos que construímos com o mesmo padrão premium.",
+      items: [
+        {
+          client: "Biodonth",
+          description: "Site institucional para clínica odontológica — agendamento via WhatsApp, SEO local, conformidade CFO/CRO.",
+          url: "https://biodonth.com.br",
+        },
+        {
+          client: "LK Digital",
+          description: "Nosso próprio site — construído com o mesmo padrão que entregamos aos clientes.",
+          url: "https://lkdigital.odo.br",
+        },
+      ],
+    },
+    guarantee: {
+      heading: "Satisfação garantida",
+      text: "Se você não aprovar o resultado final, devolvemos 100% do valor pago. Sem burocracia, sem letras miúdas. Trabalhamos com revisões até você estar satisfeito porque confiamos no que entregamos.",
+    },
     faqs: [
       {
         question: "Em quanto tempo meu site fica pronto?",
@@ -146,7 +186,7 @@ export const segments: Record<string, SegmentConfig> = {
       {
         question: "O que está incluso no site?",
         answer:
-          "Design personalizado, até 5 páginas, otimização para Google (SEO), integração com WhatsApp, formulário de contato e configuração de domínio próprio.",
+          "Design personalizado, até 5 páginas, otimização para Google (SEO), otimização para IA (ChatGPT, Gemini), integração com WhatsApp, formulário de contato e configuração de domínio próprio.",
       },
       {
         question: "Como funciona a atualização de conteúdo?",
@@ -211,6 +251,11 @@ export const segments: Record<string, SegmentConfig> = {
             "Apareça quando buscam advogados na sua área de atuação e região.",
         },
         {
+          title: "Visível para IA (ChatGPT, Gemini)",
+          description:
+            "Sites estruturados para serem recomendados por assistentes de IA — um canal de captação que seus concorrentes ainda não exploram.",
+        },
+        {
           title: "Você mesmo atualiza",
           description:
             "Atualize áreas de atuação, artigos e informações sem depender de terceiros.",
@@ -253,6 +298,26 @@ export const segments: Record<string, SegmentConfig> = {
       heading: "Conformidade com a OAB",
       text: "Construímos sites que respeitam o Código de Ética e as normas de publicidade da Ordem dos Advogados do Brasil. Comunicação institucional, sem captação indevida de clientela ou mercantilização.",
     },
+    portfolio: {
+      heading: "Sites que já entregamos",
+      description: "Veja outros projetos que construímos com o mesmo padrão premium.",
+      items: [
+        {
+          client: "Biodonth",
+          description: "Site institucional para clínica odontológica — design limpo, SEO local, conformidade regulatória.",
+          url: "https://biodonth.com.br",
+        },
+        {
+          client: "LK Digital",
+          description: "Nosso próprio site — construído com o mesmo padrão que entregamos aos clientes.",
+          url: "https://lkdigital.odo.br",
+        },
+      ],
+    },
+    guarantee: {
+      heading: "Satisfação garantida",
+      text: "Se você não aprovar o resultado final, devolvemos 100% do valor pago. Sem burocracia, sem letras miúdas. Trabalhamos com revisões até você estar satisfeito.",
+    },
     faqs: [
       {
         question: "Em quanto tempo meu site fica pronto?",
@@ -261,7 +326,7 @@ export const segments: Record<string, SegmentConfig> = {
       {
         question: "O que está incluso?",
         answer:
-          "Design personalizado, até 5 páginas, SEO, WhatsApp, formulário de contato e domínio próprio.",
+          "Design personalizado, até 5 páginas, SEO, otimização para IA, WhatsApp, formulário de contato e domínio próprio.",
       },
       {
         question: "Como funciona a atualização de conteúdo?",
@@ -323,6 +388,11 @@ export const segments: Record<string, SegmentConfig> = {
             "Produtos encontrados organicamente — tráfego que não custa por clique.",
         },
         {
+          title: "Visível para IA (ChatGPT, Gemini)",
+          description:
+            "Loja estruturada para ser recomendada por assistentes de IA quando clientes pedem sugestões de compra.",
+        },
+        {
           title: "Você mesmo atualiza",
           description:
             "Adicione produtos, altere preços e gerencie estoque sem depender de ninguém.",
@@ -365,6 +435,26 @@ export const segments: Record<string, SegmentConfig> = {
       heading: "Segurança e confiança",
       text: "Sites construídos com boas práticas de segurança, certificado SSL e estrutura que transmite confiança ao comprador.",
     },
+    portfolio: {
+      heading: "Sites que já entregamos",
+      description: "Veja outros projetos que construímos com o mesmo padrão premium.",
+      items: [
+        {
+          client: "Biodonth",
+          description: "Site institucional para clínica odontológica — design premium, SEO local, integração WhatsApp.",
+          url: "https://biodonth.com.br",
+        },
+        {
+          client: "LK Digital",
+          description: "Nosso próprio site — construído com o mesmo padrão que entregamos aos clientes.",
+          url: "https://lkdigital.odo.br",
+        },
+      ],
+    },
+    guarantee: {
+      heading: "Satisfação garantida",
+      text: "Se você não aprovar o resultado final, devolvemos 100% do valor pago. Sem burocracia, sem letras miúdas. Trabalhamos com revisões até você estar satisfeito.",
+    },
     faqs: [
       {
         question: "Em quanto tempo minha loja fica pronta?",
@@ -373,7 +463,7 @@ export const segments: Record<string, SegmentConfig> = {
       {
         question: "O que está incluso?",
         answer:
-          "Design personalizado, catálogo de produtos, carrinho, integração com pagamento, SEO e WhatsApp.",
+          "Design personalizado, catálogo de produtos, carrinho, integração com pagamento, SEO, otimização para IA e WhatsApp.",
       },
       {
         question: "Como adiciono produtos?",
@@ -435,6 +525,11 @@ export const segments: Record<string, SegmentConfig> = {
             "Site otimizado para buscas — seja encontrado por quem procura o que você oferece.",
         },
         {
+          title: "Visível para IA (ChatGPT, Gemini)",
+          description:
+            "Sites preparados para serem recomendados por assistentes de IA — seus clientes já estão perguntando para a IA onde encontrar o que você vende.",
+        },
+        {
           title: "Você mesmo atualiza",
           description:
             "Atualize textos, fotos e informações sem depender de ninguém.",
@@ -477,6 +572,26 @@ export const segments: Record<string, SegmentConfig> = {
       heading: "Qualidade garantida",
       text: "Sites construídos com as melhores práticas de desenvolvimento web, garantindo velocidade, segurança e boa experiência para seus clientes.",
     },
+    portfolio: {
+      heading: "Sites que já entregamos",
+      description: "Veja outros projetos que construímos com o mesmo padrão premium.",
+      items: [
+        {
+          client: "Biodonth",
+          description: "Site institucional para clínica odontológica — design premium, SEO local, integração WhatsApp.",
+          url: "https://biodonth.com.br",
+        },
+        {
+          client: "LK Digital",
+          description: "Nosso próprio site — construído com o mesmo padrão que entregamos aos clientes.",
+          url: "https://lkdigital.odo.br",
+        },
+      ],
+    },
+    guarantee: {
+      heading: "Satisfação garantida",
+      text: "Se você não aprovar o resultado final, devolvemos 100% do valor pago. Sem burocracia, sem letras miúdas. Trabalhamos com revisões até você estar satisfeito.",
+    },
     faqs: [
       {
         question: "Em quanto tempo meu site fica pronto?",
@@ -485,7 +600,7 @@ export const segments: Record<string, SegmentConfig> = {
       {
         question: "O que está incluso?",
         answer:
-          "Design personalizado, até 5 páginas, SEO, WhatsApp, formulário de contato e domínio próprio.",
+          "Design personalizado, até 5 páginas, SEO, otimização para IA, WhatsApp, formulário de contato e domínio próprio.",
       },
       {
         question: "Como funciona a atualização?",

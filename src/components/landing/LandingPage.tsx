@@ -15,6 +15,7 @@ export function LandingPage({ segment }: { segment: SegmentConfig }) {
         name={segment.title}
         description={segment.metaDescription}
       />
+
       {/* Hero */}
       <section className="relative min-h-[85vh] flex items-center overflow-hidden">
         <div
@@ -84,15 +85,31 @@ export function LandingPage({ segment }: { segment: SegmentConfig }) {
         </div>
       </RevealSection>
 
+      {/* Mid-page CTA */}
+      <RevealSection className="bg-bg-card">
+        <div className="mx-auto max-w-4xl px-6 py-12 text-center">
+          <p className="text-text-muted">
+            Tudo isso por um investimento a partir de{" "}
+            <span className="text-accent font-semibold">R$ {segment.pricing.buildFee}</span>.
+          </p>
+          <div className="mt-6">
+            <WhatsAppButton
+              label="Quero saber mais"
+              message={segment.hero.whatsappMessage}
+            />
+          </div>
+        </div>
+      </RevealSection>
+
       {/* Demo */}
-      <RevealSection className="bg-bg-card" id="demo">
+      <RevealSection id="demo">
         <div className="mx-auto max-w-4xl px-6 py-20 md:py-28">
           <GoldHeading>{segment.demo.heading}</GoldHeading>
           <p className="mt-4 text-text-muted leading-relaxed">
             {segment.demo.description}
           </p>
           <div className="mt-8 rounded-sm border border-bg-card-hover overflow-hidden">
-            <div className="aspect-video bg-bg-dark flex items-center justify-center">
+            <div className="aspect-video bg-bg-card flex items-center justify-center">
               {/* TODO: Replace with next/image screenshot */}
               <p className="text-text-muted text-sm">{segment.demo.screenshotAlt}</p>
             </div>
@@ -117,6 +134,47 @@ export function LandingPage({ segment }: { segment: SegmentConfig }) {
               </svg>
             </a>
           )}
+        </div>
+      </RevealSection>
+
+      {/* Portfolio — other sites we've built */}
+      <RevealSection className="bg-bg-card">
+        <div className="mx-auto max-w-4xl px-6 py-20 md:py-28">
+          <GoldHeading>{segment.portfolio.heading}</GoldHeading>
+          <p className="mt-4 text-text-muted leading-relaxed">
+            {segment.portfolio.description}
+          </p>
+          <div className="mt-12 grid gap-6 sm:grid-cols-2">
+            {segment.portfolio.items.map((item) => (
+              <a
+                key={item.client}
+                href={item.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="group block rounded-sm border border-bg-card-hover bg-bg-dark p-6 hover:border-accent/40 transition-colors"
+              >
+                <p className="font-heading text-lg font-bold group-hover:text-accent transition-colors">
+                  {item.client}
+                </p>
+                <p className="mt-2 text-sm text-text-muted leading-relaxed">
+                  {item.description}
+                </p>
+                <span className="mt-4 inline-flex items-center gap-1 text-xs font-semibold text-accent uppercase tracking-wider">
+                  Ver site ao vivo
+                  <svg
+                    className="h-3 w-3"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                    strokeWidth={2}
+                    aria-hidden="true"
+                  >
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                  </svg>
+                </span>
+              </a>
+            ))}
+          </div>
         </div>
       </RevealSection>
 
@@ -170,16 +228,40 @@ export function LandingPage({ segment }: { segment: SegmentConfig }) {
         </div>
       </RevealSection>
 
-      {/* Compliance */}
+      {/* Guarantee */}
       <RevealSection className="mx-auto max-w-4xl px-6 py-20 md:py-28">
-        <GoldHeading>{segment.compliance.heading}</GoldHeading>
-        <p className="mt-6 text-text-muted leading-relaxed max-w-2xl">
-          {segment.compliance.text}
-        </p>
+        <div className="rounded-sm border border-accent/20 bg-accent-muted p-8 md:p-12 text-center">
+          <svg
+            className="mx-auto h-10 w-10 text-accent"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+            strokeWidth={1.5}
+            aria-hidden="true"
+          >
+            <path strokeLinecap="round" strokeLinejoin="round" d="M9 12.75L11.25 15 15 9.75m-3-7.036A11.959 11.959 0 013.598 6 11.99 11.99 0 003 9.749c0 5.592 3.824 10.29 9 11.623 5.176-1.332 9-6.03 9-11.622 0-1.31-.21-2.571-.598-3.751h-.152c-3.196 0-6.1-1.248-8.25-3.285z" />
+          </svg>
+          <h2 className="mt-4 font-heading text-2xl font-bold">
+            {segment.guarantee.heading}
+          </h2>
+          <p className="mt-4 text-text-muted leading-relaxed max-w-xl mx-auto">
+            {segment.guarantee.text}
+          </p>
+        </div>
+      </RevealSection>
+
+      {/* Compliance */}
+      <RevealSection className="bg-bg-card">
+        <div className="mx-auto max-w-4xl px-6 py-20 md:py-28">
+          <GoldHeading>{segment.compliance.heading}</GoldHeading>
+          <p className="mt-6 text-text-muted leading-relaxed max-w-2xl">
+            {segment.compliance.text}
+          </p>
+        </div>
       </RevealSection>
 
       {/* FAQ */}
-      <RevealSection className="bg-bg-card">
+      <RevealSection>
         <div className="mx-auto max-w-3xl px-6 py-20 md:py-28">
           <GoldHeading>Perguntas frequentes</GoldHeading>
           <div className="mt-12">
