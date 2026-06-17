@@ -6,19 +6,23 @@ interface RevealSectionProps {
   children: React.ReactNode;
   className?: string;
   as?: "section" | "div" | "article";
+  id?: string;
 }
 
 export function RevealSection({
   children,
   className = "",
   as: Tag = "section",
+  id,
 }: RevealSectionProps) {
-  const ref = useReveal();
+  const setRef = useReveal();
 
   return (
     <Tag
-      ref={ref as React.RefObject<HTMLElement>}
+      // eslint-disable-next-line @typescript-eslint/no-explicit-any
+      ref={setRef as any}
       className={`reveal ${className}`}
+      id={id}
     >
       {children}
     </Tag>

@@ -13,11 +13,12 @@ export function GoldHeading({
   children,
   className = "",
 }: GoldHeadingProps) {
-  const ref = useReveal(0.3);
+  const setRef = useReveal(0.3);
 
   return (
     <Tag
-      ref={ref as React.RefObject<HTMLHeadingElement>}
+      // eslint-disable-next-line @typescript-eslint/no-explicit-any
+      ref={setRef as any}
       className={`font-heading font-bold gold-line ${className}`}
     >
       {children}

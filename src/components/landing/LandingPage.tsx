@@ -3,6 +3,7 @@ import { whatsappUrl } from "@/config/agency";
 import { WhatsAppButton } from "@/components/WhatsAppButton";
 import { GoldHeading } from "@/components/GoldHeading";
 import { RevealSection } from "@/components/RevealSection";
+import { ServiceJsonLd } from "@/components/JsonLd";
 import { Accordion } from "./Accordion";
 
 export function LandingPage({ segment }: { segment: SegmentConfig }) {
@@ -10,6 +11,10 @@ export function LandingPage({ segment }: { segment: SegmentConfig }) {
 
   return (
     <>
+      <ServiceJsonLd
+        name={segment.title}
+        description={segment.metaDescription}
+      />
       {/* Hero */}
       <section className="relative min-h-[85vh] flex items-center overflow-hidden">
         <div

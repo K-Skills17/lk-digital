@@ -101,7 +101,7 @@ export const segments: Record<string, SegmentConfig> = {
       heading: "Veja um exemplo real",
       description:
         "Este é o site que construímos para a Biodonth — clínica odontológica em operação.",
-      url: "https://biodonth.com.br", // TODO: confirm URL
+      url: "https://biodonth.com.br",
       screenshotAlt: "Captura de tela do site da Biodonth",
     },
     process: {
@@ -129,7 +129,7 @@ export const segments: Record<string, SegmentConfig> = {
     },
     pricing: {
       heading: "Investimento",
-      buildFee: "2.500", // TODO: confirm price
+      buildFee: "2.000", // TODO: confirm price
       monthlyFee: "150",
       paymentTerms: "50% na aprovação do projeto, 50% na entrega.",
     },
@@ -245,7 +245,7 @@ export const segments: Record<string, SegmentConfig> = {
     },
     pricing: {
       heading: "Investimento",
-      buildFee: "2.500", // TODO
+      buildFee: "2.000", // TODO
       monthlyFee: "150",
       paymentTerms: "50% na aprovação do projeto, 50% na entrega.",
     },

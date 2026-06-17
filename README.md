@@ -1,36 +1,45 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# LK Digital — Site + Landing Pages
 
-## Getting Started
+Next.js project for [lkdigitalbrasil.com.br](https://lkdigitalbrasil.com.br). Contains:
 
-First, run the development server:
+- **Company site** (`/`, `/sobre`, `/servicos`, `/trabalhos`, `/contato`) — shared nav + footer
+- **Landing pages** (`/dentistas`, `/advogados`, `/ecommerce`, `/negocios`) — nav-less, single-conversion (WhatsApp)
+
+## Run locally
 
 ```bash
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000).
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Deploy to Vercel
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+1. Push to GitHub
+2. Import in [vercel.com/new](https://vercel.com/new)
+3. No env vars required (all config is in `src/config/`)
 
-## Learn More
+## Point the domain
 
-To learn more about Next.js, take a look at the following resources:
+1. In Vercel project settings > Domains, add `lkdigitalbrasil.com.br`
+2. Update DNS at your registrar:
+   - **A record**: `@` → `76.76.21.21`
+   - **CNAME**: `www` → `cname.vercel-dns.com`
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Config (TODO slots)
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+All content lives in `src/config/`:
 
-## Deploy on Vercel
+| File | What to update |
+|---|---|
+| `agency.ts` | WhatsApp number, email, social links |
+| `segments.ts` | Build-fee prices, demo URLs, WhatsApp messages per segment |
+| `work.ts` | Portfolio items (screenshots, URLs, descriptions) |
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Stack
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- Next.js 16 (App Router), TypeScript, Tailwind CSS v4
+- No database, no CMS — content in typed config files
+- CSS animations + IntersectionObserver (no animation libraries)
+- Fonts: Playfair Display (headings) + Inter (body) via `next/font`

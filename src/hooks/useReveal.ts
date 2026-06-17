@@ -1,12 +1,16 @@
 "use client";
 
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useCallback } from "react";
 
 export function useReveal(threshold = 0.15) {
-  const ref = useRef<HTMLElement>(null);
+  const elRef = useRef<Element | null>(null);
+
+  const setRef = useCallback((node: Element | null) => {
+    elRef.current = node;
+  }, []);
 
   useEffect(() => {
-    const el = ref.current;
+    const el = elRef.current;
     if (!el) return;
 
     const prefersReduced = window.matchMedia(
@@ -34,5 +38,5 @@ export function useReveal(threshold = 0.15) {
     return () => observer.disconnect();
   }, [threshold]);
 
-  return ref;
+  return setRef;
 }
