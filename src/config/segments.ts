@@ -205,7 +205,7 @@ export const segments: Record<string, SegmentConfig> = {
       },
     ],
     finalCta: {
-      scarcity: "Vagas com preço de lançamento limitadas este mês",
+      scarcity: "Apenas 50 vagas com preço de lançamento — até 30 de junho",
       ctaLabel: "Garantir Minha Vaga",
     },
   },
@@ -342,7 +342,7 @@ export const segments: Record<string, SegmentConfig> = {
       },
     ],
     finalCta: {
-      scarcity: "Vagas com preço de lançamento limitadas este mês",
+      scarcity: "Apenas 50 vagas com preço de lançamento — até 30 de junho",
       ctaLabel: "Garantir Minha Vaga",
     },
   },
@@ -479,7 +479,7 @@ export const segments: Record<string, SegmentConfig> = {
       },
     ],
     finalCta: {
-      scarcity: "Vagas com preço de lançamento limitadas este mês",
+      scarcity: "Apenas 50 vagas com preço de lançamento — até 30 de junho",
       ctaLabel: "Garantir Minha Vaga",
     },
   },
@@ -616,7 +616,7 @@ export const segments: Record<string, SegmentConfig> = {
       },
     ],
     finalCta: {
-      scarcity: "Vagas com preço de lançamento limitadas este mês",
+      scarcity: "Apenas 50 vagas com preço de lançamento — até 30 de junho",
       ctaLabel: "Garantir Minha Vaga",
     },
   },

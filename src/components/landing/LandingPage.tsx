@@ -5,6 +5,7 @@ import { GoldHeading } from "@/components/GoldHeading";
 import { RevealSection } from "@/components/RevealSection";
 import { ServiceJsonLd } from "@/components/JsonLd";
 import { Accordion } from "./Accordion";
+import { Countdown } from "./Countdown";
 
 export function LandingPage({ segment }: { segment: SegmentConfig }) {
   const waUrl = whatsappUrl(segment.hero.whatsappMessage);
@@ -51,6 +52,18 @@ export function LandingPage({ segment }: { segment: SegmentConfig }) {
           )}
         </div>
       </section>
+
+      {/* Urgency banner */}
+      <div className="bg-accent/10 border-y border-accent/20">
+        <div className="mx-auto max-w-4xl px-6 py-6 text-center">
+          <p className="text-sm font-semibold text-accent uppercase tracking-wider">
+            Apenas 50 vagas com preço de lançamento — válido até 30 de junho
+          </p>
+          <div className="mt-4">
+            <Countdown />
+          </div>
+        </div>
+      </div>
 
       {/* Problems */}
       <RevealSection className="bg-bg-card">
@@ -274,10 +287,13 @@ export function LandingPage({ segment }: { segment: SegmentConfig }) {
       <section className="bg-accent">
         <div className="mx-auto max-w-4xl px-6 py-16 text-center">
           <p className="text-sm font-semibold uppercase tracking-wider text-text-on-accent/70">
-            {segment.finalCta.scarcity}
+            50 vagas com preço de lançamento — a oferta encerra em:
           </p>
-          <h2 className="mt-4 font-heading text-2xl md:text-3xl font-bold text-text-on-accent">
-            Comece agora — fale conosco pelo WhatsApp
+          <div className="mt-4 [&_span.font-heading]:text-text-on-accent [&_span.text-text-muted]:text-text-on-accent/60">
+            <Countdown />
+          </div>
+          <h2 className="mt-6 font-heading text-2xl md:text-3xl font-bold text-text-on-accent">
+            Garanta sua vaga antes que acabe
           </h2>
           <div className="mt-8">
             <a
