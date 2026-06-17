@@ -1,13 +1,15 @@
-import type { Metadata } from "next";
 import { GoldHeading } from "@/components/GoldHeading";
 import { RevealSection } from "@/components/RevealSection";
 import { WhatsAppButton } from "@/components/WhatsAppButton";
+import { ogMetadata } from "@/lib/og-metadata";
 
-export const metadata: Metadata = {
+export const metadata = ogMetadata({
   title: "Sobre",
   description:
     "Conheça a LK Digital — quem somos, nossa filosofia e por que construímos sites premium para pequenos negócios.",
-};
+  ogTitle: "Sobre a LK Digital",
+  ogSubtitle: "Trabalho intencional, qualidade sem atalhos.",
+});
 
 export default function SobrePage() {
   return (

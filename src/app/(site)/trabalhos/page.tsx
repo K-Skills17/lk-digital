@@ -1,14 +1,16 @@
-import type { Metadata } from "next";
 import { workItems } from "@/config/work";
 import { GoldHeading } from "@/components/GoldHeading";
 import { RevealSection } from "@/components/RevealSection";
 import { WhatsAppButton } from "@/components/WhatsAppButton";
+import { ogMetadata } from "@/lib/og-metadata";
 
-export const metadata: Metadata = {
+export const metadata = ogMetadata({
   title: "Trabalhos",
   description:
     "Veja os projetos que desenvolvemos — sites premium para pequenos negócios com foco em performance e resultado.",
-};
+  ogTitle: "Nossos Trabalhos",
+  ogSubtitle: "Cada projeto é construído sob medida.",
+});
 
 export default function TrabalhosPage() {
   return (

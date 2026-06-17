@@ -1,13 +1,15 @@
-import type { Metadata } from "next";
 import { GoldHeading } from "@/components/GoldHeading";
 import { RevealSection } from "@/components/RevealSection";
 import { WhatsAppButton } from "@/components/WhatsAppButton";
+import { ogMetadata } from "@/lib/og-metadata";
 
-export const metadata: Metadata = {
+export const metadata = ogMetadata({
   title: "Serviços",
   description:
     "Sites premium, manutenção contínua e sistemas de marketing para pequenos negócios. Conheça nossos serviços.",
-};
+  ogTitle: "Nossos Serviços",
+  ogSubtitle: "Do desenvolvimento ao suporte contínuo.",
+});
 
 const services = [
   {

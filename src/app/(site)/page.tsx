@@ -1,20 +1,17 @@
-import type { Metadata } from "next";
 import { agency } from "@/config/agency";
 import { workItems } from "@/config/work";
 import { WhatsAppButton } from "@/components/WhatsAppButton";
 import { GoldHeading } from "@/components/GoldHeading";
 import { RevealSection } from "@/components/RevealSection";
+import { ogMetadata } from "@/lib/og-metadata";
 
-export const metadata: Metadata = {
+export const metadata = ogMetadata({
   title: "LK Digital — Sites Premium para Pequenos Negócios",
   description:
     "Desenvolvemos sites premium e sistemas de marketing para pequenos negócios que querem crescer com presença digital de verdade.",
-  openGraph: {
-    title: "LK Digital — Sites Premium para Pequenos Negócios",
-    description:
-      "Sites sob medida e sistemas de marketing para pequenos negócios.",
-  },
-};
+  ogTitle: "Sites premium que transformam visitantes em clientes.",
+  ogSubtitle: "Sites sob medida e sistemas de marketing para pequenos negócios.",
+});
 
 const differentiators = [
   {

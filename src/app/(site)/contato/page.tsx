@@ -1,15 +1,17 @@
-import type { Metadata } from "next";
 import { agency } from "@/config/agency";
 import { GoldHeading } from "@/components/GoldHeading";
 import { RevealSection } from "@/components/RevealSection";
 import { WhatsAppButton } from "@/components/WhatsAppButton";
 import { ContactForm } from "./ContactForm";
+import { ogMetadata } from "@/lib/og-metadata";
 
-export const metadata: Metadata = {
+export const metadata = ogMetadata({
   title: "Contato",
   description:
     "Entre em contato com a LK Digital. Fale conosco pelo WhatsApp ou envie uma mensagem.",
-};
+  ogTitle: "Fale Conosco",
+  ogSubtitle: "WhatsApp ou formulário — como preferir.",
+});
 
 export default function ContatoPage() {
   return (
