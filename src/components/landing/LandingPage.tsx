@@ -114,39 +114,61 @@ export function LandingPage({ segment }: { segment: SegmentConfig }) {
         </div>
       </RevealSection>
 
-      {/* Demo */}
+      {/* Demo — show both example sites */}
       <RevealSection id="demo">
         <div className="mx-auto max-w-4xl px-6 py-20 md:py-28">
           <GoldHeading>{segment.demo.heading}</GoldHeading>
           <p className="mt-4 text-text-muted leading-relaxed">
             {segment.demo.description}
           </p>
-          <div className="mt-8 rounded-sm border border-bg-card-hover overflow-hidden">
-            <div className="aspect-video bg-bg-card flex items-center justify-center">
-              {/* TODO: Replace with next/image screenshot */}
-              <p className="text-text-muted text-sm">{segment.demo.screenshotAlt}</p>
-            </div>
-          </div>
-          {segment.demo.url !== "#" && (
+          <div className="mt-12 grid gap-6 sm:grid-cols-2">
             <a
-              href={segment.demo.url}
+              href="https://biodonth.com.br"
               target="_blank"
               rel="noopener noreferrer"
-              className="mt-6 inline-flex items-center gap-2 text-sm font-semibold text-accent hover:text-accent-hover transition-colors"
+              className="group block rounded-sm border border-bg-card-hover overflow-hidden hover:border-accent/40 transition-colors"
             >
-              Visitar site ao vivo
-              <svg
-                className="h-4 w-4"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-                strokeWidth={2}
-                aria-hidden="true"
-              >
-                <path strokeLinecap="round" strokeLinejoin="round" d="M14 5l7 7m0 0l-7 7m7-7H3" />
-              </svg>
+              <div className="aspect-video bg-bg-card flex items-center justify-center">
+                {/* TODO: Replace with next/image screenshot */}
+                <div className="text-center p-6">
+                  <p className="text-xs text-text-muted uppercase tracking-wider">Cliente</p>
+                  <p className="mt-1 font-heading text-lg font-bold group-hover:text-accent transition-colors">Biodonth</p>
+                  <p className="mt-2 text-xs text-text-muted">Clínica Odontológica</p>
+                </div>
+              </div>
+              <div className="p-4 bg-bg-dark">
+                <span className="inline-flex items-center gap-1 text-xs font-semibold text-accent uppercase tracking-wider">
+                  Ver site ao vivo
+                  <svg className="h-3 w-3" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2} aria-hidden="true">
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                  </svg>
+                </span>
+              </div>
             </a>
-          )}
+            <a
+              href="https://lkdigital.odo.br"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="group block rounded-sm border border-bg-card-hover overflow-hidden hover:border-accent/40 transition-colors"
+            >
+              <div className="aspect-video bg-bg-card flex items-center justify-center">
+                {/* TODO: Replace with next/image screenshot */}
+                <div className="text-center p-6">
+                  <p className="text-xs text-text-muted uppercase tracking-wider">Nosso site</p>
+                  <p className="mt-1 font-heading text-lg font-bold group-hover:text-accent transition-colors">LK Digital</p>
+                  <p className="mt-2 text-xs text-text-muted">Agência Digital</p>
+                </div>
+              </div>
+              <div className="p-4 bg-bg-dark">
+                <span className="inline-flex items-center gap-1 text-xs font-semibold text-accent uppercase tracking-wider">
+                  Ver site ao vivo
+                  <svg className="h-3 w-3" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2} aria-hidden="true">
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                  </svg>
+                </span>
+              </div>
+            </a>
+          </div>
         </div>
       </RevealSection>
 

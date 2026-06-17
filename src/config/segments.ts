@@ -118,9 +118,9 @@ export const segments: Record<string, SegmentConfig> = {
       ],
     },
     demo: {
-      heading: "Veja um exemplo real",
+      heading: "Veja exemplos reais",
       description:
-        "Este é o site que construímos para a Biodonth — clínica odontológica em operação.",
+        "Confira sites que já construímos — incluindo a Biodonth, clínica odontológica em operação.",
       url: "https://biodonth.com.br",
       screenshotAlt: "Captura de tela do site da Biodonth",
     },
@@ -263,10 +263,10 @@ export const segments: Record<string, SegmentConfig> = {
       ],
     },
     demo: {
-      heading: "Veja um exemplo real",
-      description: "Em breve — estamos preparando uma demonstração para escritórios de advocacia.",
-      url: "#", // TODO: add demo URL
-      screenshotAlt: "Exemplo de site para escritório de advocacia",
+      heading: "Veja exemplos reais",
+      description: "Confira sites que já construímos com o mesmo padrão premium que você vai receber.",
+      url: "https://biodonth.com.br",
+      screenshotAlt: "Captura de tela do site da Biodonth — exemplo de site premium",
     },
     process: {
       heading: "Como funciona",
@@ -400,10 +400,10 @@ export const segments: Record<string, SegmentConfig> = {
       ],
     },
     demo: {
-      heading: "Veja um exemplo real",
-      description: "Em breve — estamos preparando uma demonstração de loja virtual.",
-      url: "#", // TODO
-      screenshotAlt: "Exemplo de loja virtual premium",
+      heading: "Veja exemplos reais",
+      description: "Confira sites que já construímos com o mesmo padrão premium que você vai receber.",
+      url: "https://biodonth.com.br",
+      screenshotAlt: "Captura de tela do site da Biodonth — exemplo de site premium",
     },
     process: {
       heading: "Como funciona",
@@ -537,10 +537,10 @@ export const segments: Record<string, SegmentConfig> = {
       ],
     },
     demo: {
-      heading: "Veja um exemplo real",
-      description: "Em breve — estamos preparando uma demonstração para pequenos negócios.",
-      url: "#", // TODO
-      screenshotAlt: "Exemplo de site para pequeno negócio",
+      heading: "Veja exemplos reais",
+      description: "Confira sites que já construímos com o mesmo padrão premium que você vai receber.",
+      url: "https://biodonth.com.br",
+      screenshotAlt: "Captura de tela do site da Biodonth — exemplo de site premium",
     },
     process: {
       heading: "Como funciona",
