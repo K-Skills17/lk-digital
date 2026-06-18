@@ -2,7 +2,7 @@ export const agency = {
   name: "LK Digital",
   domain: "lkdigitalbrasil.com.br",
   whatsapp: {
-    number: "5500000000000", // TODO: replace with real number
+    number: "5511946851028",
     defaultMessage: "Olá! Gostaria de saber mais sobre os serviços da LK Digital.",
   },
   email: "contato@lkdigitalbrasil.com.br", // TODO: replace with real email
