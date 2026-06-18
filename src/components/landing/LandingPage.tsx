@@ -7,6 +7,8 @@ import { ServiceJsonLd } from "@/components/JsonLd";
 import { Accordion } from "./Accordion";
 import { Countdown } from "./Countdown";
 
+const slotsRemaining = parseInt(process.env.NEXT_PUBLIC_SLOTS_REMAINING || "50", 10);
+
 export function LandingPage({ segment }: { segment: SegmentConfig }) {
   const waUrl = whatsappUrl(segment.hero.whatsappMessage);
 
@@ -57,7 +59,7 @@ export function LandingPage({ segment }: { segment: SegmentConfig }) {
       <div className="bg-accent/10 border-y border-accent/20">
         <div className="mx-auto max-w-4xl px-6 py-6 text-center">
           <p className="text-sm font-semibold text-accent uppercase tracking-wider">
-            Apenas 50 vagas com preço de lançamento — válido até 30 de junho
+            Apenas {slotsRemaining} vagas com preço de lançamento — válido até 30 de junho
           </p>
           <div className="mt-4">
             <Countdown />
@@ -309,7 +311,7 @@ export function LandingPage({ segment }: { segment: SegmentConfig }) {
       <section className="bg-accent">
         <div className="mx-auto max-w-4xl px-6 py-16 text-center">
           <p className="text-sm font-semibold uppercase tracking-wider text-text-on-accent/70">
-            50 vagas com preço de lançamento — a oferta encerra em:
+            {slotsRemaining} vagas com preço de lançamento — a oferta encerra em:
           </p>
           <div className="mt-4 [&_span.font-heading]:text-text-on-accent [&_span.text-text-muted]:text-text-on-accent/60">
             <Countdown />
